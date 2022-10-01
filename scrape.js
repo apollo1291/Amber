@@ -1,3 +1,6 @@
 
-a = document.getElementById('bylineInfo')
-console.log(a.textContent)
+
+
+Company_name = document.getElementById('bylineInfo').textContent.slice(10)
+
+console.log(textContent)
