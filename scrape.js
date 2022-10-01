@@ -19,7 +19,7 @@ else if(tentativeName.includes("Brand: ")){
     console.log('as')
     companyName = tentativeName
     .slice(
-        tentativeName.indexOf(':')
+        tentativeName.indexOf(':') + 2
     )   
 }
 
