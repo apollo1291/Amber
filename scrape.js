@@ -1,9 +1,11 @@
 
 const collectProductData = () =>{
-    companyName;
-    productWeight;
-    shippingFrom;
-    merchantCountry
+    procuctInfo = {
+    companyName: "",
+    productWeight: "",
+    shippingFrom: "",
+    merchantCountry: ""
+}
 
 // get Brand name  
 if (document.getElementById('bylineInfo')){
@@ -28,3 +30,5 @@ console.log(companyName)
 }
 
 }
+
+collectProductData()
