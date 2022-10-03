@@ -30,7 +30,7 @@ const collectProductTitle = () => {
 
 const collectProductData = () =>{
 
-    procuctInfo = {
+    productInfo = {
     companyName: "",
     procuctTitle: "",
     productWeight: "",
@@ -39,7 +39,7 @@ const collectProductData = () =>{
 }
 
 // get Brand name  
-    procuctInfo[companyName] = collectPodructCompany()
+    productInfo.companyName = collectPodructCompany()
 
 // Get product Title for AI categorization
 Title = document.getElementById("productTitle")
