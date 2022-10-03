@@ -11,7 +11,7 @@ const collectPoductCompany = () =>{
             console.log('as')
             companyName = tentativeName
             .slice(
-                tentativeName.indexOf(':')
+                tentativeName.indexOf(':') + 2
             )   
         }
 }
@@ -42,6 +42,15 @@ const collectPoductDesc = () => {
 
 }
 
+const collectProductCost = () => {
+    dollarCost = parseInt(document.getElementsByClassName("a-price-whole"))
+    centCost = parseInt(document.getElementsByClassName("a-price-fraction")) / 100
+
+    totalCost = dollarCost + centCost
+
+    return totalCost
+}
+
 const collectProductData = () => {
 
     productInfo = {
@@ -49,6 +58,7 @@ const collectProductData = () => {
     productTitle: "",
     productDesc: "",
     productWeight: "",
+    productCost: "",
     shippingFrom: "",
     merchantCountry: "",
 }
@@ -61,6 +71,9 @@ const collectProductData = () => {
 
 // Get Product descriptions for further categorization.
     productInfo.productDesc = collectPoductDesc()
+
+// Get Product Cost for use in Carbon API unit
+    productInfo.productCost = collectProductCost()
 
 
 
