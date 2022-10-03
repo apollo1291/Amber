@@ -23,7 +23,7 @@ const collectProductTitle = () => {
 
     Title = document.getElementById("productTitle")
     if (Title){
-        productTitle = Title.textContent.strip()
+        productTitle = Title.textContent.trim()
         return productTitle
     }
 
