@@ -30,11 +30,19 @@ const collectProductTitle = () => {
     return null
 }
 
+const collectPoductDesc = () => {
+    Desc = document.getElementsByClassName("a-list-item")
+    console.log(Desc)
+    return Desc
+
+}
+
 const collectProductData = () => {
 
     productInfo = {
     companyName: "",
     productTitle: "",
+    productDesc: "",
     productWeight: "",
     shippingFrom: "",
     merchantCountry: "",
@@ -45,6 +53,9 @@ const collectProductData = () => {
 
 // Get product Title for AI categorization
     productInfo.productTitle = collectProductTitle()
+
+// Get Product descriptions for further categorization.
+    productInfo.productDesc = collectPoductDesc()
 
 
 
