@@ -44,7 +44,7 @@ const collectPoductDesc = () => {
 
 const collectProductCost = () => {
     dollarCost = parseInt(document.getElementsByClassName("a-price-whole")[0].textContent)
-    centCost = parseInt(document.getElementsByClassName("a-price-fraction").textContent) / 100
+    centCost = parseInt(document.getElementsByClassName("a-price-fraction")[0].textContent) / 100
 
     console.log(document.getElementsByClassName("a-price-whole")[0])
     console.log(dollarCost)
