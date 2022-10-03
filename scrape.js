@@ -51,7 +51,7 @@ console.log(Title)
 
 // get Weight, if no weight get dimensions. 
 
-console.log(collectPoductTitle())
+console.log(collectPoductTitle)
 console.log(companyName)
 
 }
