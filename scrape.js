@@ -35,7 +35,7 @@ const collectPoductDesc = () => {
     descTags = descContainer.getElementsByClassName("a-list-item")
     Desc = []
     for(let i = 0; i < descTags.length; i += 1){
-        Desc.push(descTags[i].textContent)
+        Desc.push(descTags[i].textContent.trim())
     }
     console.log(Desc)
     return Desc
