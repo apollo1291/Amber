@@ -20,15 +20,17 @@ return companyName
 }
 
 const collectProductTitle = () => {
+
     Title = document.getElementById("productTitle")
     if (Title){
         productTitle = Title.textContent
+        return productTitle
     }
 
-    return productTitle
+    return null
 }
 
-const collectProductData = () =>{
+const collectProductData = () => {
 
     productInfo = {
     companyName: "",
@@ -51,7 +53,7 @@ console.log(Title)
 
 // get Weight, if no weight get dimensions. 
 
-console.log(collectPoductTitle)
+console.log(collectProductTitle())
 console.log(companyName)
 
 }
