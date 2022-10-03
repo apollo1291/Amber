@@ -27,7 +27,9 @@ const collectProductTitle = () => {
 
     return productTitle
 }
+
 const collectProductData = () =>{
+    
     procuctInfo = {
     companyName: "",
     procuctTitle: "",
@@ -40,7 +42,12 @@ const collectProductData = () =>{
     procuctInfo.companyName = collectPodructCompany()
 
 // Get product Title for AI categorization
-    procuctInfo.productTitle = 
+Title = document.getElementById("productTitle")
+if (Title){
+    productTitle = Title.textContent
+}
+
+console.log(productTitle)
 
 // get Weight, if no weight get dimensions. 
 
