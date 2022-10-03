@@ -1,4 +1,4 @@
-const collectPodructCompany = () =>{
+const collectPoductCompany = () =>{
     companyName = "asd "
     if (document.getElementById('bylineInfo')){
 
@@ -39,7 +39,7 @@ const collectProductData = () =>{
 }
 
 // get Brand name  
-    productInfo.companyName = collectPodructCompany()
+    productInfo.companyName = collectPoductCompany()
 
 // Get product Title for AI categorization
 Title = document.getElementById("productTitle")
@@ -51,7 +51,7 @@ console.log(Title)
 
 // get Weight, if no weight get dimensions. 
 
-console.log(collectPodructTitle())
+console.log(collectPoductTitle())
 console.log(companyName)
 
 }
