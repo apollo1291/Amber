@@ -29,7 +29,7 @@ const collectProductTitle = () => {
 }
 
 const collectProductData = () =>{
-    
+
     procuctInfo = {
     companyName: "",
     procuctTitle: "",
@@ -47,7 +47,7 @@ if (Title){
     productTitle = Title.textContent
 }
 
-console.log(productTitle)
+console.log(Title)
 
 // get Weight, if no weight get dimensions. 
 
