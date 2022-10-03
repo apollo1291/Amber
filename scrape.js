@@ -1,5 +1,5 @@
 const collectPodructCompany = () =>{
-
+    companyName = "asd "
     if (document.getElementById('bylineInfo')){
 
         tentativeName = document.getElementById('bylineInfo').textContent
@@ -39,7 +39,7 @@ const collectProductData = () =>{
 }
 
 // get Brand name  
-    companyName = collectPodructCompany()
+    productInfo.companyName = collectPodructCompany()
 
 // Get product Title for AI categorization
 Title = document.getElementById("productTitle")
