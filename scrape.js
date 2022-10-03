@@ -35,7 +35,7 @@ const collectPoductDesc = () => {
     descTags = descContainer.getElementsByClassName("a-list-item")
     Desc = []
     for(tags in descTags){
-        Desc.push(tags.textContent)
+        Desc.push(tags.innerText)
     }
     console.log(Desc)
     return Desc
