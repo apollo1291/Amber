@@ -33,12 +33,11 @@ const collectProductTitle = () => {
 const collectPoductDesc = () => {
     descContainer = document.getElementById("feature-bullets")
     descTags = descContainer.getElementsByClassName("a-list-item")
-     Desc = []
-     /*
-    for(tags in descTags){
-        Desc.push(tags.innerText)
-    } */
-    console.log(descTags)
+    Desc = []
+    for(let i = 0; i < descTags.length; i += 1){
+        Desc.push(descTags[i].textContent)
+    }
+    console.log(Desc)
     return Desc
 
 }
