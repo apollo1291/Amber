@@ -1,5 +1,5 @@
 const collectPoductCompany = () =>{
-    companyName = "asd "
+    companyName = null
     if (document.getElementById('bylineInfo')){
 
         tentativeName = document.getElementById('bylineInfo').textContent
@@ -34,7 +34,7 @@ const collectProductData = () => {
 
     productInfo = {
     companyName: "",
-    procuctTitle: "",
+    productTitle: "",
     productWeight: "",
     shippingFrom: "",
     merchantCountry: "",
@@ -44,17 +44,13 @@ const collectProductData = () => {
     productInfo.companyName = collectPoductCompany()
 
 // Get product Title for AI categorization
-Title = document.getElementById("productTitle")
-if (Title){
-    productTitle = Title.textContent
-}
+    productInfo.productTitle = collectProductTitle()
 
-console.log(Title)
+
 
 // get Weight, if no weight get dimensions. 
 
-console.log(collectProductTitle())
-console.log(companyName)
+console.log(productInfo)
 
 }
 
