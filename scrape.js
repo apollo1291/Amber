@@ -39,7 +39,7 @@ const collectProductData = () =>{
 }
 
 // get Brand name  
-    procuctInfo.companyName = collectPodructCompany()
+    procuctInfo[companyName] = collectPodructCompany()
 
 // Get product Title for AI categorization
 Title = document.getElementById("productTitle")
