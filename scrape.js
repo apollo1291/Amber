@@ -31,8 +31,12 @@ const collectProductTitle = () => {
 }
 
 const collectPoductDesc = () => {
-    DescContainer = document.getElementById("feature-bullets")
-    Desc = DescContainer.getElementsByClassName("a-list-item")
+    descContainer = document.getElementById("feature-bullets")
+    descTags = descContainer.getElementsByClassName("a-list-item")
+    Desc = []
+    for(tags in descTags){
+        Desc.push(tags.textContent)
+    }
     console.log(Desc)
     return Desc
 
