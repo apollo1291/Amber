@@ -31,7 +31,8 @@ const collectProductTitle = () => {
 }
 
 const collectPoductDesc = () => {
-    Desc = document.getElementsByClassName("a-list-item")
+    DescContainer = document.getElementById("feature-bullets")
+    Desc = DescContainer.getElementsByClassName("a-list-item")
     console.log(Desc)
     return Desc
 
