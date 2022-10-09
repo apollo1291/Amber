@@ -27,6 +27,7 @@ const getEstimate = () => {
 }
 
 data = collectProductData()
+console.log(data)
 serverTest = fetch("http://localhost:5000/get_emissions", {
   method: "POST",
 
