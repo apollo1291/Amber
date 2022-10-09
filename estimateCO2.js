@@ -25,7 +25,13 @@ const collectProductTitle = () => {
 
 const collectPoductDesc = () => {
   descContainer = document.getElementById("feature-bullets");
+  if (descContainer){
   descTags = descContainer.getElementsByClassName("a-list-item");
+
+}
+else{
+  return
+}
   Desc = [];
   for (let i = 0; i < descTags.length; i += 1) {
     Desc.push(descTags[i].textContent.trim());
