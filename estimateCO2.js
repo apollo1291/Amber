@@ -120,7 +120,9 @@ fetch("http://localhost:5000/get_emissions", {
   },
   body: JSON.stringify({ dt: data })
 }).then((serverTest) => {
-  console.log(serverTest)
+  serverTest.json().then((serverBody) => {
+    console.log(serverBody)
+  })
 });
 
 
