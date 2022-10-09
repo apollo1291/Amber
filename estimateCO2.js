@@ -112,7 +112,9 @@ fetch("http://localhost:5000/get_emissions", {
   method: "POST",
 
   headers: {
-    'Content-Type': "application/json"
+    'Content-Type': "application/json",
+    'Access-Control-Allow-Headers': Accept
+
   },
   body:{
     data: data
