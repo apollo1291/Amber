@@ -1,4 +1,4 @@
-const collectProductData = require("Scarpers/scrapeAmazon.js")
+require("Scarpers/scrapeAmazon.js")
 
 require("dotenv").config();
 
