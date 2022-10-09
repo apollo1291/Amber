@@ -15,7 +15,7 @@ def process_json():
     if (content_type == 'application/json'):
         return request.get_json()
     else:
-        return 'Content-Type not supported'
+        return 'Content-Type not supported!'
 
 
 
