@@ -1,4 +1,4 @@
-import collectProductData from "Scarpers/scrapeAmazon.js"
+import {collectProductData} from "Scarpers/scrapeAmazon.js"
 
 require("dotenv").config();
 
