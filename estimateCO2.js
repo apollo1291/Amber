@@ -107,7 +107,9 @@ const getEstimate = () => {
 }
 
 data = collectProductData()
+
 console.log(data)
+
 fetch("http://localhost:5000/get_emissions", {
   method: "POST",
 
@@ -116,7 +118,7 @@ fetch("http://localhost:5000/get_emissions", {
     'origin': '*'
 
   },
-  
+  body: JSON.stringify({ dt: data })
 }).then((serverTest) => {
   console.log(serverTest)
 });
