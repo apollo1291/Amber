@@ -1,8 +1,21 @@
-require("Scarpers/scrapeAmazon.js")
 
-require("dotenv").config();
 
-productData = collectProductData();
+import('Scarpers/scrapeAmazon.js').then(({ productData }) => {
+  data = collectProductData()
+console.log(data)
+serverTest = fetch("http://localhost:5000/get_emissions", {
+  method: "POST",
+
+  headers: {
+    'Content-Type': "application/json"
+  },
+  body:{
+    data: data
+  }
+})
+
+console.log(serverTest)
+});
 
 const getEstimate = () => {
 
@@ -26,18 +39,4 @@ const getEstimate = () => {
     return emission
 }
 
-data = collectProductData()
-console.log(data)
-serverTest = fetch("http://localhost:5000/get_emissions", {
-  method: "POST",
-
-  headers: {
-    'Content-Type': "application/json"
-  },
-  body:{
-    data: data
-  }
-})
-
-console.log(serverTest)
 
