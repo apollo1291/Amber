@@ -13,7 +13,7 @@ def start():
 def process_json():
     content_type = request.headers.get('Content-Type')
     if (content_type == 'application/json'):
-        json = request.body
+        json = request
         
         return json
     else:
