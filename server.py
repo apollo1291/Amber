@@ -17,7 +17,7 @@ def process_json():
         
         return json
     else:
-        return 'Content-Type not supported!'
+        return 'Content-Type not supported'
 
 
 
