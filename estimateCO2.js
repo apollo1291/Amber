@@ -116,9 +116,7 @@ fetch("http://localhost:5000/get_emissions", {
     'origin': '*'
 
   },
-  body:{
-    data: data
-  }
+  
 }).then((serverTest) => {
   console.log(serverTest)
 });
