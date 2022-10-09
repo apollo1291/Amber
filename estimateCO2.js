@@ -113,10 +113,10 @@ fetch("http://localhost:5000/get_emissions", {
 
   headers: {
     'Content-Type': "application/json",
-    'Access-Control-Allow-Origin': '*'
+    'origin': '*'
 
   },
-  body:{
+  'body':{
     data: data
   }
 }).then((serverTest) => {
