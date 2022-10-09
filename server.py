@@ -1,8 +1,9 @@
 # import main Flask class and request object
 from flask import Flask, request
+from flask_cors import CORS
 
-# create the Flask app
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/')
 def start():
