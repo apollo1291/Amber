@@ -48,7 +48,7 @@ const collectProductCost = () => {
   return totalCost;
 };
 
-export const collectProductData = () => {
+const collectProductData = () => {
   productInfo = {
     companyName: "",
     productTitle: "",
