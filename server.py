@@ -3,6 +3,7 @@ from unicodedata import category
 from flask import Flask, request
 from flask_cors import CORS
 from emissions_calculator.usableModel import predict
+from emissions_calculator.vocab import text_pipeline
 import json
 
 app = Flask(__name__)
@@ -19,7 +20,7 @@ def process_json():
         product = request.get_json()
         print(product)
         print(product["productTitle"])
-        category = predict(product["productTitle"])
+        category = predict(product["productTitle"], text_pipeline)
         print(category)
         return json.dumps({"productCategory": category})
     else:
