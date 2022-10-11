@@ -4,9 +4,9 @@ import pandas
 from torch.utils.data import DataLoader
 from torch.utils.data.dataset import random_split
 from torchtext.data.functional import to_map_style_dataset
-from modelDef import model
-from vocab import data
-from dataloader import collate_batch
+from emissions_calculator.modelDef import model
+from emissions_calculator.vocab import data
+from emissions_calculator.dataloader import collate_batch
 
 def train(dataloader):
     model.train()

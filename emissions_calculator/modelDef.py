@@ -1,6 +1,6 @@
-from vocab import data
-from vocab import vocab
-from modelClass import TextClassificationModel
+from emissions_calculator.vocab import data
+from emissions_calculator.vocab import vocab
+from emissions_calculator.modelClass import TextClassificationModel
 import pandas
 import torch
 

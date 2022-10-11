@@ -1,7 +1,7 @@
 from torch.utils.data import DataLoader
-from vocab import label_pipeline
-from vocab import text_pipeline
-from vocab import data
+from emissions_calculator.vocab import label_pipeline
+from emissions_calculator.vocab import text_pipeline
+from emissions_calculator.vocab import data
 import torch
 
 
