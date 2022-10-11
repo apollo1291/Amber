@@ -35,7 +35,7 @@ fetch("http://localhost:5000/get_emissions", {
     'origin': '*'
 
   },
-  body: { data }
+  body: JSON.stringify( data )
 }).then((serverTest) => {
   serverTest.json().then((serverBody) => {
     console.log(serverBody)
