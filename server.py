@@ -1,6 +1,7 @@
 # import main Flask class and request object
 from flask import Flask, request
 from flask_cors import CORS
+import json
 
 app = Flask(__name__)
 CORS(app)
@@ -16,7 +17,7 @@ def process_json():
         product = request.get_json()
         print(product)
         print(product["productTitle"])
-        return product["productTitle"]
+        return json.dumps({"productTitle": product["productTitle"]})
     else:
         return 'Content-Type not supported!'
 
