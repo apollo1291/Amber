@@ -13,7 +13,8 @@ def start():
 def process_json():
     content_type = request.headers.get('Content-Type')
     if (content_type == 'application/json'):
-        return request.get_json()["companyName"]
+        print(request.get_json())
+        return request.get_json()
     else:
         return 'Content-Type not supported!'
 
