@@ -30,7 +30,6 @@ const collectPoductDesc = () => {
   for (let i = 0; i < descTags.length; i += 1) {
     Desc.push(descTags[i].textContent.trim());
   }
-  console.log(Desc);
   return Desc;
 };
 
@@ -73,7 +72,7 @@ const collectProductData = () => {
 
   // get Weight, if no weight get dimensions.
 
-  console.log(productInfo);
+  
   return productInfo
 };
 
