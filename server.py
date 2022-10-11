@@ -1,6 +1,8 @@
 # import main Flask class and request object
+from unicodedata import category
 from flask import Flask, request
 from flask_cors import CORS
+from emissions_calculator import usableModel
 import json
 
 app = Flask(__name__)
@@ -17,7 +19,9 @@ def process_json():
         product = request.get_json()
         print(product)
         print(product["productTitle"])
-        return json.dumps({"productTitle": product["productTitle"]})
+        category = usableModel.predict(product["productTitle"])
+        print(category)
+        return json.dumps({"productCategory": category})
     else:
         return 'Content-Type not supported!'
 
