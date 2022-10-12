@@ -43,7 +43,7 @@ def process_json():
 
             }
         }
-        response = requests.post(URL, headers=headers, data=data).json()
+        response = requests.post(URL, headers=headers, json=data).json()
         return json.dumps({"emissions": response})
     else:
         return 'Content-Type not supported!'
