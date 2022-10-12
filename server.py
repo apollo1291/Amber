@@ -7,6 +7,8 @@ from emissions_calculator.vocab import text_pipeline
 import CategoryMapping
 import json
 import requests
+import os
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 CORS(app)
@@ -23,10 +25,11 @@ def process_json():
     
         category = predict(product["productTitle"], text_pipeline)
         API_cat = CategoryMapping.AMAZON_TO_API_CATEGORY[category]
-
+        load_dotenv()
+        MY_API_KEY = os.getenv('MY_API_KEY')
         URL = 'https://beta3.api.climatiq.io/estimate'
         headers = {
-        'Authorization': 'Bearer {MY_API_KEY}',
+        'Authorization': 'Bearer {KEY}'.format(KEY = MY_API_KEY),
         'Content-Type': 'application/x-www-form-urlencoded',
         }
         data = {
