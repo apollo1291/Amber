@@ -43,6 +43,7 @@ def process_json():
 
             }
         }
+        print(data)
         response = requests.post(URL, headers=headers, json=data).json()
         return json.dumps({"emissions": response})
     else:
