@@ -24,7 +24,9 @@ def process_json():
         product = request.get_json()
     
         category = predict(product["productTitle"], text_pipeline)
+        print(category)
         API_cat = CategoryMapping.AMAZON_TO_API_CATEGORY[category]
+        print(API_cat)
         load_dotenv()
         MY_API_KEY = os.getenv('MY_API_KEY')
         URL = 'https://beta3.api.climatiq.io/estimate'
@@ -34,7 +36,7 @@ def process_json():
         }
         data = {
             "emission_factor": { 
-                "id": CategoryMapping.API_CATEGORY_TO_EMISSION_FACTOR_ID[API_cat],
+                "id": API_cat,
                 "region": "us"
             },
             "parameters": {
