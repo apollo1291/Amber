@@ -37,60 +37,60 @@ AMAZON_TO_API_CATEGORY = {
 
 }
 
-API_CATEGORY_TO_EMISSION_FACTOR_ID = {
-    "Sporting and athletic goods": "60e77058-39ec-4cbb-9fd7-1518936138f3",
+API_CATEGORY_TO_ACTIVITY_ID = {
+    "Sporting and athletic goods": "consumer_goods-type_sporting_athletic_goods",
 
-    "Clothing": "0c3fd8c6-7b47-4607-92eb-5097e1dd58cb",
+    "Clothing": "consumer_goods-type_clothing",
     
-    "Home cooking appliances": "1e622044-56eb-4b3e-b7db-28121de61c5e",
+    "Home cooking appliances": "electrical_equipment-type_home_cooking_appliances",
 
-    "Consumer goods and general rental centers": "c23ad7b2-2e83-4e66-b2c3-6402c62a3246",
+    "Consumer goods and general rental centers": "consumer_goods_rental-type_consumer_goods_general_rental_centers",
     
-    "other miscellaneous electrical equipment and components": "6d1547d9-404b-440f-8e7b-8dbebfecbbad",
+    "other miscellaneous electrical equipment and components": "electrical_equipment-type_other_miscellaneous_electrical_equipment_components",
 
-    "Computer software and games": "e590de48-217d-4c61-a465-45b878dd049e",
+    "Computer software and games": "consumer_goods-type_software",
 
-    "Independent artists/writers and performers": "45eb3b01-dae4-42b9-be7a-577d53e408a3",
+    "Independent artists/writers and performers": "consumer_goods-type_independent_artists_writers_performers",
 
-    "Health and personal care stores": "2a4974a2-4e74-4e98-aa7e-45822c1177a3",
+    "Health and personal care stores": "health_care-type_health_personal_care_stores",
 
-    "Building material and garden equipment and supplies dealers": "33c087e6-f075-4779-963e-5c21ab7a212d",
+    "Building material and garden equipment and supplies dealers": "equipment_gardening_diy-type_building_material_garden_equipment_supplies_dealers",
 
-    "Power tools": "d680d03b-63d5-4a59-9da0-c67b5216a4e6",
+    "Power tools": "machinery-type_power_tools",
 
-    "Office supplies (not paper)": "b21b5abe-aa38-4841-9a98-6b76cb7d532e",
+    "Office supplies (not paper)": "office_equipment-type_office_supplies_not_paper",
 
-    "Grocery and related product wholesalers": "afa7587e-967c-43e6-90f6-ba7ba203b210",
+    "Grocery and related product wholesalers": "wholesale_trade-type_grocery_related_product_wholesalers",
 
-    "Other commercial and service industry machinery": "6b563e43-e0e6-469c-beda-b35693991688",
+    "Other commercial and service industry machinery": "machinery-type_other_commercial_service_industry_machinery",
 
-    "Sale/maintenance/repair/parts/accessories of motor vehicles/motorcycles": "7cb9576b-f21b-4bfc-995e-c0c89f5efe0d",
+    "Sale/maintenance/repair/parts/accessories of motor vehicles/motorcycles": "vehicle_manufacture-type_sale_maintenance_repair_parts_accessories_motor_vehicles_motorcycles",
 
-    "General merchandise stores": "58cff1ad-a620-4256-8cd0-c77e791c8a7d",
+    "General merchandise stores": "general_retail-type_general_merchandise_stores",
 
-    "Automobiles": "760df9e0-8509-4fa3-93f3-383831f07292",
+    "Automobiles": "passenger_vehicle-vehicle_type_automobiles-fuel_source_na-engine_size_na-vehicle_age_na-vehicle_weight_na",
 
-    "Gaskets/seals/musical instruments/fasteners/brooms/brushes/mop and other misc. goods": "56e13dfe-0bca-44b9-a04f-924a50710734",
+    "Gaskets/seals/musical instruments/fasteners/brooms/brushes/mop and other misc. goods": "consumer_goods-type_gaskets_seals_musical_instruments_fasteners_brooms_brushes_mop_other_misc._goods",
 
-    "Radio and television": "2a4d169a-0a9d-4370-95ed-8d7eff72f068",
+    "Radio and television": "consumer_goods-type_radio_television",
 
-    "Telephones": "bc6bf6c9-d5df-41c0-9e77-380ebf38c87c",
+    "Telephones": "electronics-type_telephones",
 
-    "Dolls/toys and games": "232ddd4d-2850-41c5-910a-635daf2422ac",
+    "Dolls/toys and games": "consumer_goods-type_dolls_toys_games",
 
-    "Small electrical appliances": "1405f53f-fbfc-47ff-9c75-d2d35c8c7596",
+    "Small electrical appliances": "electrical_equipment-type_small_electrical_appliances",
 
-    "Books": "b3b37672-39e8-466e-9058-033f8ab40d07",
+    "Books": "consumer_goods-type_books",
 
-    "All other retail": "7a384da9-ad84-44bc-a252-768e516a5181",
+    "All other retail": "general_retail-type_all_other_retail",
 
-    "Medical/precision and optical instruments/watches and clocks": "8041917e-cb86-42a2-8b82-87a18e1bb288",
+    "Medical/precision and optical instruments/watches and clocks": "electrical_equipment-type_medical_precision_optical_instruments_watches_clocks",
 
-    "External hard drives/CDs/other storage media": "1a49bb56-ddeb-4675-9f1d-c59745eb2501",
+    "External hard drives/CDs/other storage media": "electronics-type_external_hard_drives_cds_other_storage_media",
 
-    "Motorcycle/bicycle and parts": "a54069cb-d90f-4422-bb63-fcc67e188142",
+    "Motorcycle/bicycle and parts": "passenger_vehicle-vehicle_type_motorcycle_bicycle_parts-fuel_source_na-engine_size_na-vehicle_age_na-vehicle_weight_na",
 
-    "Office machinery and computers": "3d009931-563b-4346-9403-bfb6f0461010"
+    "Office machinery and computers": "office_equipment-type_office_machinery_computers"
 
 
 

@@ -36,7 +36,7 @@ def process_json():
         }
         data = {
             "emission_factor": { 
-                "id": "consumer_goods_rental-type_consumer_goods_general_rental_centers",
+                "id": CategoryMapping.API_CATEGORY_TO_ACTIVITY_ID[API_cat],
                 "region": "us"
             },
             "parameters": {
