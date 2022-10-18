@@ -41,6 +41,7 @@ const collectPoductDesc = () => {
 };
 
 const collectProductCost = () => {
+  try{
   dollarCost = parseInt(
     document.getElementsByClassName("a-price-whole")[0].textContent
   );
@@ -52,6 +53,10 @@ const collectProductCost = () => {
   totalCost = dollarCost + centCost;
 
   return totalCost;
+}
+catch(err){
+  return
+}
 };
 
 const collectProductData = () => {
