@@ -26,7 +26,8 @@ const collectPoductCategory = () => {
   try{
     Searchbox = document.getElementById("searchDropdownBox")
      cat = Searchbox.children[0].textContent
-        return cat
+     print(cat)
+      return cat
       
     
   }
