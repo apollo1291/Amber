@@ -25,6 +25,7 @@ const collectProductTitle = () => {
 const collectPoductCategory = () => {
   try {
     Searchbox = document.getElementById("searchDropdownBox");
+    console.log(Searchbox)
     console.log(Searchbox.children)
     for (opt in Searchbox.children){
       try{
