@@ -28,8 +28,10 @@ const collectPoductCategory = () => {
     console.log(Searchbox)
     console.log(Searchbox.children)
     for (opt in Searchbox.children){
+      console.log(opt)
       try{
-        if (opt.getAttribute("selected") = "selected"){
+        if (opt.getAttribute("selected")){
+          console.log(opt.textContent)
           cat = opt.textContent
         }
       }
