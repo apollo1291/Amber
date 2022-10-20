@@ -23,6 +23,7 @@ def process_json():
     if (content_type == 'application/json'):
         product = request.get_json()
         # check that the product cat was able to be scraped
+        print(product["Category"] in list(CategoryMapping.AMAZON_TO_API_CATEGORY.keys()))
         if product["Category"] != "" and product["Category"] in list(CategoryMapping.AMAZON_TO_API_CATEGORY.keys()):
             category = product["Category"]
         #if not guess using AI

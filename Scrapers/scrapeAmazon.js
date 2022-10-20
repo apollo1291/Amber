@@ -25,13 +25,13 @@ const collectProductTitle = () => {
 const collectPoductCategory = () => {
   try {
     Searchbox = document.getElementById("searchDropdownBox");
-    console.log(Searchbox)
-    console.log(Searchbox.children)
-    for (let i = 0; i < Searchbox.children.length; i += 1){
+    options = Searchbox.children
+    // options is an html collection
+    for (let i = 0; i < options.length; i += 1){
       try{
-        if (Searchbox.children[i].getAttribute("selected")){
-          console.log(Searchbox.children[i].textContent)
-          cat = Searchbox.children[i].textContent
+        if (options[i].getAttribute("selected")){
+          console.log(options[i].textContent)
+          cat = options[i].textContent
         }
       }
       catch(err){

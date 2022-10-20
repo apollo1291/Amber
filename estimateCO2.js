@@ -1,6 +1,8 @@
 
 const getEmissions = () =>{
   
+  // collectProductData should vary based on which online site is currently in use. 
+  // content scripts should run the file that defines collectProductData based on the url 
   data = collectProductData()
 
 console.log(data)
@@ -17,6 +19,7 @@ fetch("http://localhost:5000/get_emissions", {
 }).then((response) => {
   response.json().then((serverBody) => {
     console.log(serverBody)
+    // not defined in the global scope
     emissionData = serverBody
   })
 });
