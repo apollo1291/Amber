@@ -1,6 +1,7 @@
 
-
-data = collectProductData()
+const getEmissions = () =>{
+  
+  data = collectProductData()
 
 console.log(data)
 
@@ -13,11 +14,16 @@ fetch("http://localhost:5000/get_emissions", {
 
   },
   body: JSON.stringify( data )
-}).then((serverTest) => {
-  serverTest.json().then((serverBody) => {
+}).then((response) => {
+  response.json().then((serverBody) => {
     console.log(serverBody)
+    emissionData = serverBody
   })
 });
+
+}
+
+getEmissions()
 
 
 
