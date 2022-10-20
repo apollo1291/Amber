@@ -28,13 +28,13 @@ const collectPoductCategory = () => {
     for (opt in Searchbox.children){
       if (opt.selected = "selected"){
         cat = opt.value
-        print(cat)
+        console.log(cat)
         return cat
       }
     }
   }
   catch(err){
-    print(err)
+    console.log(err)
     return
   }
 }
@@ -96,7 +96,7 @@ const collectProductData = () => {
 
   // Get Product Cost for use in Carbon API unit
   productInfo.productCost = collectProductCost();
-  
+
   // get the category of the product
   productInfo.Category = collectPoductCategory();
 
