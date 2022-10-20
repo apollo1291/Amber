@@ -23,28 +23,23 @@ const collectProductTitle = () => {
   return null;
 };
 const collectPoductCategory = () => {
-  try{
-    Searchbox = document.getElementById("searchDropdownBox")
-     cat = Searchbox.children[0].textContent
-      return cat
-      
-    
+  try {
+    Searchbox = document.getElementById("searchDropdownBox");
+    cat = Searchbox.children[0].textContent;
+    return cat;
+  } catch (err) {
+    console.log(err);
+    return;
   }
-  catch(err){
-    console.log(err)
-    return
-  }
-}
+};
 const collectPoductDesc = () => {
-  
-  try{
+  try {
     descContainer = document.getElementById("feature-bullets");
     descTags = descContainer.getElementsByClassName("a-list-item");
+  } catch (err) {
+    return;
   }
-  catch(err){
-    return
-  }
-  
+
   Desc = [];
   for (let i = 0; i < descTags.length; i += 1) {
     Desc.push(descTags[i].textContent.trim());
@@ -53,22 +48,21 @@ const collectPoductDesc = () => {
 };
 
 const collectProductCost = () => {
-  try{
-  dollarCost = parseInt(
-    document.getElementsByClassName("a-price-whole")[0].textContent
-  );
-  centCost =
-    parseInt(
-      document.getElementsByClassName("a-price-fraction")[0].textContent
-    ) / 100;
+  try {
+    dollarCost = parseInt(
+      document.getElementsByClassName("a-price-whole")[0].textContent
+    );
+    centCost =
+      parseInt(
+        document.getElementsByClassName("a-price-fraction")[0].textContent
+      ) / 100;
 
-  totalCost = dollarCost + centCost;
+    totalCost = dollarCost + centCost;
 
-  return totalCost;
-}
-catch(err){
-  return
-}
+    return totalCost;
+  } catch (err) {
+    return;
+  }
 };
 
 const collectProductData = () => {
@@ -97,11 +91,5 @@ const collectProductData = () => {
   // get the category of the product
   productInfo.Category = collectPoductCategory();
 
-  
-
-  
-  return productInfo
+  return productInfo;
 };
-
-
-

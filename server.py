@@ -22,11 +22,12 @@ def process_json():
     content_type = request.headers.get('Content-Type')
     if (content_type == 'application/json'):
         product = request.get_json()
-        # if product["Category"] in CategoryMapping:
-
-        # If product['Category'] is not in the category mapping
-        #use AI to guess category
-        category = predict(product["productTitle"], text_pipeline)
+        # check that the product cat was able to be scraped
+        if product["Category"] != "" and product["Category"] in list(CategoryMapping.AMAZON_TO_API_CATEGORY.keys()):
+            category = product["Category"]
+        #if not guess using AI
+        else:
+            category = predict(product["productTitle"], text_pipeline)
         print(category)
         API_cat = CategoryMapping.AMAZON_TO_API_CATEGORY[category]
         print(API_cat)
