@@ -28,6 +28,7 @@ const collectPoductCategory = () => {
     console.log(Searchbox)
     for (opt in Searchbox.children){
       if (opt.selected = "selected"){
+        console.log(opt)
         cat = opt.value
         console.log(cat)
         return cat
