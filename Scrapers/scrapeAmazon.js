@@ -25,16 +25,10 @@ const collectProductTitle = () => {
 const collectPoductCategory = () => {
   try{
     Searchbox = document.getElementById("searchDropdownBox")
-    console.log(Searchbox)
-    console.log(Searchbox.children[0])
-    for (opt in Searchbox.children){
-      if (opt.getAtttribute("selected") = "selected"){
-        console.log(opt)
-        cat = opt.value
-        console.log(cat)
+     cat = Searchbox.children[0].textContent
         return cat
-      }
-    }
+      
+    
   }
   catch(err){
     console.log(err)
