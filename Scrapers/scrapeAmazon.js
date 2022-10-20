@@ -32,13 +32,13 @@ const collectPoductCategory = () => {
         if (options[i].getAttribute("selected")){
           console.log(options[i].textContent)
           cat = options[i].textContent
+          return cat
         }
       }
       catch(err){
           continue
       }
     }
-    return cat;
   } catch (err) {
     console.log(err);
     return;
