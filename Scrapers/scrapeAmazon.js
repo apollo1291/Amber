@@ -27,7 +27,7 @@ const collectPoductCategory = () => {
     Searchbox = document.getElementById("searchDropdownBox")
     console.log(Searchbox)
     for (opt in Searchbox.children){
-      if (opt.selected = "selected"){
+      if (opt.getAtttribute("selected") = "selected"){
         console.log(opt)
         cat = opt.value
         console.log(cat)
