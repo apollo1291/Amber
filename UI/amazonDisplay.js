@@ -5,3 +5,5 @@ emissionData = await getEmissions()
 buyButton.textContent = emissionData.emissions.co2e
 
 }
+
+display()
