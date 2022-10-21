@@ -20,10 +20,11 @@ fetch("http://localhost:5000/get_emissions", {
   response.json().then((serverBody) => {
     console.log(serverBody)
     // not defined in the global scope
-    emissionData = serverBody
+    var emissionData = serverBody
   })
 });
 
+return emissionData
 }
 
 getEmissions()

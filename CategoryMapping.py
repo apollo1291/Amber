@@ -96,8 +96,7 @@ API_CATEGORY_TO_ACTIVITY_ID = {
 
 
 
-
-
-
 }
+
+print(list(AMAZON_TO_API_CATEGORY.keys()))
 

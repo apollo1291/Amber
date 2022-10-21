@@ -6,7 +6,7 @@
 
 "content_scripts": [{
     "matches": ["<all_urls>"],
-    "js": ["Scrapers/scrapeAmazon.js", "estimateCO2.js"],
+    "js": ["Scrapers/scrapeAmazon.js", "estimateCO2.js", "UI/amazonDisplay"],
     "run_at": "document_end"
 }]
 

@@ -5,7 +5,7 @@ const collectPoductCompany = () => {
     if (tentativeName.includes("Visit the")) {
       companyName = tentativeName.slice(10);
     } else if (tentativeName.includes("Brand: ")) {
-      console.log("as");
+      
       companyName = tentativeName.slice(tentativeName.indexOf(":") + 2);
     }
   }
