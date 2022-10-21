@@ -24,7 +24,7 @@ console.log(emissionData)
 return emissionData
 }
 
-getEmissions()
+
 
 
 
