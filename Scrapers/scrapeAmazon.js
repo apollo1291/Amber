@@ -5,7 +5,6 @@ const collectPoductCompany = () => {
     if (tentativeName.includes("Visit the")) {
       companyName = tentativeName.slice(10);
     } else if (tentativeName.includes("Brand: ")) {
-      
       companyName = tentativeName.slice(tentativeName.indexOf(":") + 2);
     }
   }
@@ -25,18 +24,17 @@ const collectProductTitle = () => {
 const collectPoductCategory = () => {
   try {
     Searchbox = document.getElementById("searchDropdownBox");
-    options = Searchbox.children
+    options = Searchbox.children;
     // options is an html collection
-    for (let i = 0; i < options.length; i += 1){
-      try{
-        if (options[i].getAttribute("selected")){
-          console.log(options[i].textContent)
-          cat = options[i].textContent
-          return cat
+    for (let i = 0; i < options.length; i += 1) {
+      try {
+        if (options[i].getAttribute("selected")) {
+          console.log(options[i].textContent);
+          cat = options[i].textContent;
+          return cat;
         }
-      }
-      catch(err){
-          continue
+      } catch (err) {
+        continue;
       }
     }
   } catch (err) {

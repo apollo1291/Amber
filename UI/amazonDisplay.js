@@ -1,13 +1,31 @@
-const display = async () =>{
+const removePopup = () => {
+    let popup = document.getElementById("display")
 
-var buyButton = document.getElementById("submit.buy-now-announce")
-emissionData = await getEmissions()
-buyButton.textContent = emissionData.emissions.co2e + " kg of Carbon Dioxide"
-
-var b = document.getElementsByTagName('body');
-b.innerHTML = b.innerHTML + "<div id=\"display\"><div id = \"header\">Amber</div><div id = \"main\">Buyers Impact: 2 Kilos of Carbon Dioxide</div></div>";
-
+    popup.innerHTML = ""
+    popup.remove()
 }
+const display = async () => {
+  emissionData = await getEmissions();
 
-display()
+  footprint = Math.round(emissionData.emissions.co2e);
 
+  let popup = document.createElement("div");
+  popup.setAttribute("id", "display");
+  popup.onclick = removePopup
+  popup.innerHTML =
+    '<div id = "header">Amber</div><div id = "main">Buyers Impact: Around ' +
+    footprint +
+    " Kilos of Carbon Dioxide</div>";
+  page = document.getElementsByTagName("body")[0];
+  console.log(page.isConnected);
+  page.appendChild(popup);
+
+  console.log("display run");
+
+};
+
+const alter_button = () => {
+  document.getElementById("buy-now-button").onclick = display;
+};
+
+window.addEventListener("load", display, false);
