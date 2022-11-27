@@ -5,10 +5,18 @@
 "version": "1.0",
 
 "content_scripts": [{
-    "matches": ["<all_urls>"],
-    "js": ["Scrapers/scrapeAmazon.js", "estimateCO2.js", "UI/popup.css", "UI/amazonDisplay.js"],
+    "matches": ["https://www.amazon.com/*"],
+    "js": ["Scrapers/scrapeAmazon.js", "estimateCO2.js", "UI/amazonDisplay.js"],
+    "css": ["UI/popup.css"],
     "run_at": "document_end"
-}]
+},
+{
+    "matches": ["https://www.ebay.com/*"],
+    "js": [],
+    "css":["UI/popup.css"],
+    "run_at": "document_end"
+}
+]
 
 
 }
