@@ -34,7 +34,7 @@ def process_json():
         API_cat = CategoryMapping.AMAZON_TO_API_CATEGORY[category]
         print(API_cat)
         load_dotenv()
-        MY_API_KEY = os.getenv('MY_API_KEY')
+        MY_API_KEY = os.getenv('CLIMATE_KEY')
         URL = 'https://beta3.api.climatiq.io/estimate'
         headers = {
         'Authorization': 'Bearer {KEY}'.format(KEY = MY_API_KEY),
