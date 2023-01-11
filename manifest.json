@@ -3,6 +3,14 @@
 "name": "Amber",
 "Description": "Track Carbon Emissions",
 "version": "1.0",
+"icons": {
+    "32": "assets/32leaf.png",
+    "128": "assets/128leaf.png"
+  },
+
+"background":{
+    "service_worker": "background.js"
+},
 
 "content_scripts": [{
     "matches": ["https://www.amazon.com/*"],
