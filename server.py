@@ -9,6 +9,7 @@ import json
 import requests
 import os
 from dotenv import load_dotenv
+import time
 
 app = Flask(__name__)
 CORS(app)
@@ -19,6 +20,7 @@ def start():
 
 @app.route('/get_emissions', methods=['POST'])
 def process_json():
+    processStart = time.time()
     content_type = request.headers.get('Content-Type')
     if (content_type == 'application/json'):
         product = request.get_json()
@@ -29,7 +31,10 @@ def process_json():
             category = product["Category"]
         #if not guess using AI
         else:
+            start = time.time()
             category = predict(product["productTitle"], text_pipeline)
+            end = time.time()
+            print(end - start)
         print(category)
         API_cat = CategoryMapping.AMAZON_TO_API_CATEGORY[category]
         print(API_cat)
@@ -52,7 +57,14 @@ def process_json():
             }
         }
         print(data)
+        start = time.time()
         response = requests.post(URL, headers=headers, json=data).json()
+        end = time.time()
+        print(end - start)
+
+        processEnd = time.time()
+        print(processEnd - processStart)
+        
         return json.dumps({"emissions": response})
     else:
         return 'Content-Type not supported!'
