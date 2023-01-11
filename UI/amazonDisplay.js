@@ -8,7 +8,6 @@ const display = async () => {
   emissionData = await getEmissions();
 
   footprint = Math.round(emissionData.emissions.co2e);
-
   let popup = document.createElement("div");
   popup.setAttribute("id", "display");
   popup.onclick = removePopup
@@ -21,11 +20,10 @@ const display = async () => {
   page.appendChild(popup);
 
   console.log("display run");
-
+  setTimeout(removePopup
+    
+  , 10000);
 };
 
-const alter_button = () => {
-  document.getElementById("buy-now-button").onclick = display;
-};
 
 window.addEventListener("load", display, false);
