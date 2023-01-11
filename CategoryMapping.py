@@ -90,7 +90,10 @@ API_CATEGORY_TO_ACTIVITY_ID = {
 
     "Motorcycle/bicycle and parts": "passenger_vehicle-vehicle_type_motorcycle_bicycle_parts-fuel_source_na-engine_size_na-vehicle_age_na-vehicle_weight_na",
 
-    "Office machinery and computers": "office_equipment-type_office_machinery_computers"
+    "Office machinery and computers": "office_equipment-type_office_machinery_computers",
+
+    "Domestic appliances and disposables": "electrical_equipment-type_other_miscellaneous_electrical_equipment_components"
+
 
 
 
